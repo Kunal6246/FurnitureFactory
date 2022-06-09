@@ -12,10 +12,17 @@ public class FurnitureOrder implements FurnitureOrderInterface {
      */
     FurnitureOrder() {
         // TODO: Complete the constructor
+        furnitures =new HaspMap<Furniture,Integer>();
+        
     }
 
     public void addToOrder(final Furniture type, final int furnitureCount) {
         // TODO: Complete the method
+        Integer count=0;
+        if(furniture.containsKey(type)){
+            count=furnitures.get(type);
+        }
+        furnitures.put(type,count+furnitureeCount);
     }
 
     public HashMap<Furniture, Integer> getOrderedFurniture() {
